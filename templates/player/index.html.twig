@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Team index{% endblock %}
+
+{% block body %}
+<section class="container pt-5">
+    <div class="shadow p-5 mb-5 bg-body rounded">
+        <div class="d-flex align-items-center mb-5">
+            <h2>Available Players</h2>
+            <a class="btn btn-primary ms-auto" href="{{ path('app_team_index') }}">Back to Home</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Price</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for player in players %}
+                    <tr class="align-middle">
+                        <td>{{ player.name }}</td>
+                        <td>{{ player.surname }}</td>
+                        <td>{{ player.price }}</td>
+                        <td class="text-center">
+                            <a class="btn btn-sm btn-info" href="{{ path('app_player_buy', {'playerId':player.id, 'teamId': teamId }) }}">Buy Now</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="4">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+    
+{% endblock %}

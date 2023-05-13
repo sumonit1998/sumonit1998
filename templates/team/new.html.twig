@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Team{% endblock %}
+
+{% block body %}
+    <section class="container pt-5">
+        <div class="shadow p-5 mb-5 bg-body rounded">
+            <div class="d-flex align-items-center mb-5">
+                <h2>Create New Team</h2>
+                <a class="btn btn-primary ms-auto" href="{{ path('app_team_index') }}">Back to List</a>
+            </div>
+            <div class="create-form p-3 shadow rounded m-auto">
+                {{ include('team/_form.html.twig') }}
+            </div>
+        </div>
+    </section>
+
+    
+{% endblock %}
