@@ -15,6 +15,6 @@ Step 3: Run these commands :
 	
 Step 4: Start symfony Server
 ```
-	symfony server:start
+symfony server:start
 ```
  
