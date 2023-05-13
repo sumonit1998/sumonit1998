@@ -12,4 +12,7 @@ Step 3: Run these commands :
 	php bin/console make:migration
 	php bin/console doctrine:migrations:migrate
 	php bin/console doctrine:fixtures:load
+	
+Step 4: Start symfony Server
+	symfony server:start
  
