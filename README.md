@@ -1,7 +1,9 @@
 To run this project please follow these steps :
 
-Step 1: Go to project Directory . Composer install 
-
+Step 1: Go to project Directory. 
+```
+Composer install 
+```
 Step 2: Modify .env file with
 
 DATABASE_URL="mysql://username:password@127.0.0.1:3306/db_name?serverVersion=8.0.32&charset=utf8mb4"
