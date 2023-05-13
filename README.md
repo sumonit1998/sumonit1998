@@ -14,5 +14,7 @@ Step 3: Run these commands :
 	php bin/console doctrine:fixtures:load
 	
 Step 4: Start symfony Server
+```
 	symfony server:start
+```
  
